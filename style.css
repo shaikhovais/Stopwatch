@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: rgb(230, 230, 230);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.heading {
+  font-size: 50px;
+  margin: 20px;
+  color: rgba(255, 0, 187, 1);
+}
+
+.display {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border: 1px solid rgb(203, 33, 158);
+  background-color: black;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 0, 187, 1);
+  margin: 20px;
+  transition: all 0.3s ease;
+}
+
+#start-btn {
+  border: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 40px;
+  animation: all 1s ease-in-out;
+  color: rgba(255, 0, 187, 1);
+}
+
+#start-btn:hover {
+    background-color: rgba(204, 44, 183, 1);
+    color: black;
+}
+
+#pause-btn,
+#reset-btn {
+  font-size: 25px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 0, 187, 1);
+  color: rgba(255, 0, 187, 1);
+  background-color: black;
+  margin: 20px;
+  padding: 5px 10px;
+}
+
+#pause-btn:hover,
+#reset-btn:hover {
+  background-color: rgba(255, 0, 187, 1);
+  color: black;
+}
+
+#displayTime {
+  display: none;
+}
+
+#timer-status {
+  color: rgba(255, 0, 187, 1);
+  font-size: 20px;
+}
+
+#buttons-container {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(204, 44, 183, 1);
+  }
+  50% {
+    box-shadow: 0 0 0 30px rgba(204, 169, 44, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 40px;
+    }
+
+    .display {
+        height: 200px;
+        width: 200px;
+        font-size: 30px;
+    }
+
+    #pause-btn, #reset-btn {
+        font-size: 20px;
+    }
+}
+
