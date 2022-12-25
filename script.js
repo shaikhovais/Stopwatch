@@ -94,7 +94,6 @@ function startStopwatch() {
 
   if (minutes <= 9) {
     if (minutes == 0) {
-      // not using strict equals operator because time is in string
       outputMinutes.innerHTML = "00";
     } else {
       outputMinutes.innerHTML = "0" + minutes;
